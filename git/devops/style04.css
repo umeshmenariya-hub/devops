@@ -1,0 +1,169 @@
+ div.content {
+            flex-grow: 1;
+            padding: 1px 16px;
+            height: calc(100vh - 58px);
+            /* viewport height minus navbar */
+            overflow-y: auto;
+            /* enable vertical scroll */
+            overflow-x: hidden;
+            /* prevent horizontal scroll */
+        }
+
+        .topic-content {
+            display: none;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .topic-content.visible {
+            display: block;
+            opacity: 1;
+        }
+
+        .navbar {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            color: blanchedalmond;
+            background-color: #1759e6;
+        }
+
+        .nav-title {
+            flex: 1;
+            text-align: center;
+            margin-right: 40px;
+        }
+
+        .sidebar-container {
+            display: flex;
+            min-height: calc(100vh - 58px);
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f1f1f1;
+            height: calc(100vh - 58px);
+            /* height below navbar */
+            overflow-y: auto;
+            /* enable vertical scrolling */
+            overflow-x: hidden;
+            /* prevent horizontal scroll */
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+        .sidebar.hidden {
+            transform: translateX(-220px);
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar a.active {
+            background-color: #1759e6;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        div.content {
+            flex-grow: 1;
+            padding: 1px 16px;
+        }
+
+        .sidebar-toggle-btn {
+            background-color: #f1f1f1;
+            color: black;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            padding: 6px 10px;
+        }
+
+        .sidebar-toggle-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* CODE BOX STYLE */
+        .code-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            margin: 10px 0 20px;
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .code-box code {
+            white-space: pre;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .sidebar.hidden {
+                transform: translateY(-300px);
+            }
+
+            .sidebar a {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+
+            .nav-title {
+                font-size: 24px;
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+
+        .Footer {
+            display: flex;
+            justify-content: center;
+            background-color: #1759e6;
+            color: white;
+            text-align: center;
+        }
+        input{
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            border: 1px solid #cfcfcf;
+        }
+
+        input:hover {
+            background-color: #f1f1f1;
+            border-color: #1759e6;
+            border: none;
+            
+        }
